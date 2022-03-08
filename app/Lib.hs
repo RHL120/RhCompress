@@ -19,7 +19,7 @@ findRepeat :: [Word8] -> Int -> Word8
 findRepeat xs i = fromIntegral $ fr xs i i - i
   where
     fr xs i o
-      | i - o >= 255 = 255
+      | (i - o) >= 255 = 254
       | length xs <= (i + 1) || xs !! i /= xs !! (i + 1) = i
       | otherwise = fr xs (i + 1) o
 
