@@ -13,7 +13,7 @@ getCfg = do
   args <- getArgs
   if length args < 2
     then do
-      putStrLn (printf "Usage: %s <filename> <compres/decompress>" pname)
+      putStrLn (printf "Usage: %s <compres/decompress> <filename>" pname)
       exitFailure
     else return (head args, args !! 1)
 
